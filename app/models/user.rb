@@ -11,17 +11,13 @@ class User
   key :gender, String, :length => 1
   key :encrypted_password, String
   key :password_salt, String
-  key :confirmed_at, Time
-  key :confirmation_token, String
-  key :confirmation_sent_at, Time
-  key :unconfirmed_email, String
   
   key :roles, Set
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :confirmable, :token_authenticatable,
+  devise :database_authenticatable, :registerable, :token_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessor :login
