@@ -1,0 +1,73 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/heberthbraga/workspace/musikchords-srv/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/heberthbraga/workspace/musikchords-srv/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/heberthbraga/workspace/musikchords-srv/app/models/ability.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/heberthbraga/workspace/musikchords-srv/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1346542345
+  }
+}

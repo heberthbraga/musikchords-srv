@@ -1,0 +1,17 @@
+base: &base
+    host: localhost
+    port: 27017
+    user: 
+    password:
+
+development:
+    database: musikchords-srv_development
+    <<: *base
+
+test:
+    database: musikchords-srv_test
+    <<: *base
+        
+production:
+    database: musikchords-srv_production
+    <<: *base
