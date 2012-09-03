@@ -11,6 +11,13 @@ class User
   key :gender, String, :length => 1
   key :encrypted_password, String
   key :password_salt, String
+  key :current_sign_in_at, Time
+  key :remember_created_at, Time
+  key :last_sign_in_at, Time
+  key :current_sign_in_ip, String
+  key :last_sign_in_ip, String
+  key :sign_in_count, Integer
+  timestamps!
   
   key :roles, Set
   

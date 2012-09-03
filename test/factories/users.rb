@@ -11,5 +11,9 @@ FactoryGirl.define do
     password                '123456'
     password_confirmation   '123456'
     gender                  'M'
+    
+    factory :admin do roles ['ADMIN'] end
+    
+    factory :registered do roles ['USER'] end
   end
 end

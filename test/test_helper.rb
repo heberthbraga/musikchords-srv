@@ -23,13 +23,43 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   setup do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.orm = 'mongo_mapper'
+    database_cleaner_up
   end
   
   teardown do
-    DatabaseCleaner.clean
+    database_cleaner_down
   end
+end
+
+class ActionDispatch::IntegrationTest
+  setup do
+    database_cleaner_up
+  end
+  
+  teardown do
+    database_cleaner_down
+  end
+end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+  
+  setup do
+    database_cleaner_up
+  end
+  
+  teardown do
+    database_cleaner_down
+  end
+end
+
+def database_cleaner_up
+  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.orm = 'mongo_mapper'
+end
+
+def database_cleaner_down
+  DatabaseCleaner.clean
 end
 
 class Object
