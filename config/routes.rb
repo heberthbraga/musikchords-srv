@@ -1,6 +1,5 @@
 MusikchordsSrv::Application.routes.draw do
-  devise_for :users, :path => 'users', :controllers => { :sessions => 'sessions', :passwords => 'passwords', 
-                                                         :registrations => 'registrations' }, :skip => [:sessions]
+  devise_for :users, :path => 'users', :controllers => { :sessions => 'sessions', :registrations => 'registrations' }, :skip => [:sessions]
                                                                                                                 
   devise_scope :user do
     # registrations
@@ -11,6 +10,8 @@ MusikchordsSrv::Application.routes.draw do
     post 'sign_in' => 'sessions#create', :as => :user_session 
     get 'sign_out' => 'sessions#destroy', :as => :destroy_user_session
   end
+  
+  resources :users
   
   root :to => 'index#index'
 end
